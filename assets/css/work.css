@@ -1,0 +1,74 @@
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5rem;
+  margin-top: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-items: center; /* Karten zentrieren */
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 300px;
+  aspect-ratio: 4 / 5;
+
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("../img/polaroidBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  text-decoration: none;
+  color: inherit;
+  z-index: 1001
+}
+@media (max-width: 900px) {
+  .project-card {
+    z-index: 1; /* oder 0, je nach Bedarf */
+    position: relative;
+  }
+}
+
+.project-card:hover {
+  transform: rotate(0deg) translateY(-10px) !important;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+}
+
+.project-card img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 0px;
+  aspect-ratio: 1/1;
+}
+
+.project-card h3 {
+  flex: 1; /* takes remaining space under the image */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: center;
+
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+}
+
+@media (max-width: 900px) {
+  project-card {
+    z-index: 100;
+  }
+   }

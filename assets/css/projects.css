@@ -1,0 +1,420 @@
+/* ========================================
+   PROJEKTSEITEN - SPEZIFISCHE STYLES
+   ======================================== */
+
+/* Project hero braucht relative positioning für absolute Navigation */
+.project-hero {
+  position: relative;
+}
+
+/* Main braucht relative positioning für X-Button */
+main {
+  position: relative;
+}
+
+/* Video Wrapper – normal 16:9 frame */
+.video-wrapper {
+  position: relative;
+  width: 65%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+  margin-bottom: 8rem;
+  z-index: 1001
+}
+
+
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ========================================
+   HOCHFORMAT VIDEO LAYOUT
+   ======================================== */
+
+.portrait-video-section {
+  margin-bottom: 6rem;
+}
+
+/* Container nur für Videos (wie .project-hero bei normalen Videos) */
+.portrait-video-row {
+  position: relative; /* Für Navigation */
+  display: flex;
+  gap: 8rem;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+}
+
+.portrait-video-wrapper {
+  position: relative;
+  width: auto;
+  height: 100%; /* Gleiche Höhe wie normale Videos (65% * 16/9) */
+  aspect-ratio: 9 / 16; /* Hochformat - Breite passt sich an */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.portrait-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.portrait-details-row {
+  display: flex;
+  gap: 8rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.portrait-video-details {
+  flex: 0 0 300px; /* Breite bei 600px Höhe und 9:16 = 600 * 9/16 */
+  text-align: left;
+}
+
+.portrait-video-details .year {
+  font-size: 1.2rem;
+  font-family: var(--font-accent);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.portrait-video-details .description {
+  font-size: 1.1rem;
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .portrait-video-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .portrait-video-wrapper {
+    height: 450px; /* Größere Höhe auf Mobile */
+  }
+  
+  .portrait-details-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .portrait-video-details {
+    flex: 0 0 253.125px; /* Breite bei 450px Höhe und 9:16 */
+  }
+
+  .video-wrapper {
+    z-index: 1; /* oder 0, je nach Bedarf */
+    position: relative;
+  }
+}
+
+
+/* Projektdetails – Zwei Spalten */
+.project-details {
+  display: flex;
+  gap: 4rem;
+  margin: 0 20%;
+  padding-bottom: 4rem;
+}
+
+.details-left,
+.details-right {
+  flex: 1;
+}
+
+.details-left p {
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-family: var(--font-accent);
+  text-align: left;
+}
+
+.details-right p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  font-family: var(--font-main);
+  text-align: left;
+}
+
+/* Responsive – Spalten untereinander auf kleineren Bildschirmen */
+@media (max-width: 900px) {
+  .project-details {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 5%;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+header {
+  background: #eceae9; 
+  position: sticky;
+  top: 0;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+
+}
+
+.project-title {
+  font-family: var(--font-main);
+  font-size: 1.4rem;
+  font-weight: lighter;
+  margin-bottom: 0rem;
+}
+
+.project-subtitle {
+  font-family: var(--font-accent);
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+.project-intro {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ========================================
+   POLAROID GALLERY
+   ======================================== */
+
+.polaroid-gallery {
+  position: relative;
+  height: 450px;
+  margin: 4rem auto;
+  max-width: 900px;
+}
+
+.polaroid {
+  position: absolute;
+  width: 250px;
+  aspect-ratio: 4/5;
+  background: white;
+  background-image: url("../img/polaroidBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  padding: 0.8rem 0.8rem 1.8rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+  --rotation: 0deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.polaroid figcaption {
+  text-align: center;
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+/* CRITICAL: Hover Effect */
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.08) !important;
+  z-index: 100 !important;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .polaroid-gallery {
+    height: 350px;
+    margin: 3rem auto;
+  }
+  
+  .polaroid {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .polaroid-gallery {
+    height: 300px;
+    margin: 2rem auto;
+  }
+  
+  .polaroid {
+    width: 120px;
+  }
+  
+  .polaroid figcaption {
+    font-size: 0.75rem;
+  }
+}
+
+/* ========================================
+   GALLERY OVERLAY
+   ======================================== */
+
+.gallery-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+
+.gallery-overlay.active {
+  display: flex;
+}
+
+.gallery-overlay img {
+  max-width: 85vw;
+  max-height: 85vh;
+}
+
+.gallery-overlay button {
+  position: absolute;
+  background: none;
+  border: none;
+  color: white;
+  font-family: var(--font-accent);
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.gallery-overlay .close {
+  top: 2rem;
+  right: 2rem;
+}
+
+.gallery-overlay .prev {
+  left: 2rem;
+}
+
+.gallery-overlay .next {
+  right: 2rem;
+}
+
+/* ========================================
+   PROJECT NAVIGATION
+   ======================================== */
+
+.project-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 50;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.project-nav-btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  font-size: 2.5rem;
+  font-family: var(--font-main);
+  color: #333;
+  font-weight: bold;
+  line-height: 1;
+  
+  transform: rotate(-2deg);
+}
+
+.project-nav-btn:hover {
+  background: none;
+  transform: scale(1.2);
+}
+
+.project-nav-prev {
+  left: 2rem;
+}
+
+.project-nav-next {
+  right: 2rem;
+}
+
+.project-nav-back {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 50;
+  font-size: 2.5rem;
+  font-family: var(--font-main);
+  color: #333;
+  font-weight: lighter;
+  line-height: 1;
+  pointer-events: auto;
+  background: none;  
+  transform: rotate(3deg);
+}
+
+.project-nav-back:hover {
+  transform: rotate(10deg) scale(1.2);
+  background: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-nav-btn {
+    width: 0px;
+    height: 0px;
+    font-size: 2rem;
+  }
+  
+  .project-nav-prev {
+    left: 1rem;
+  }
+  
+  .project-nav-next {
+    right: 1rem;
+  }
+  
+  .project-nav-back {
+    top: 0;
+    left: 1rem;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Künstler:innenportraits</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/projects.css">
+</head>
+<body>
+  <header>
+     <nav>
+  <a href="home.html" class="logo">Eva Eklaude</a>
+  
+  <!-- NEU: Burger Button -->
+  <button class="burger-menu" aria-label="Menü öffnen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <!-- Class hinzufügen: nav-links -->
+  <ul class="nav-links">
+    <li><a href="../work.html" class="pencil-link">Projekte</a></li>
+    <li><a href="../about.html" class="pencil-link">Über mich</a></li>
+    <li><a href="../contact.html" class="pencil-link">Kontakt</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <main>
+    <button class="project-nav-back" aria-label="Zurück zur Übersicht">×</button>
+
+    <h1 class="project-title">KÜNSTLER:INNENPORTRAITS</h1>
+    <h2 class="project-subtitle">Auftragsarbeit</h2>
+
+    <!-- Projekt Video -->
+    <section class="project-hero">
+      <!-- Projekt Navigation -->
+      <div class="project-navigation">
+        <button class="project-nav-btn project-nav-prev" aria-label="Vorheriges Projekt">‹</button>
+        <button class="project-nav-btn project-nav-next" aria-label="Nächstes Projekt">›</button>
+      </div>
+      
+      <div class="video-wrapper">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/ImnT7LVw9zk " >
+      </iframe>
+      </div>
+    </section>
+
+
+
+    <!-- Projektdetails -->
+    <section class="project-details">
+      <div class="details-left">
+        <p>2025 <br> Konzept, Interview, Postproduction</p>
+      </div>
+      <div class="details-right">
+        <p>
+        Diese Videoportraits entstanden im Auftrag der Stadt Graz anlässlich der Verleihung des Kulturförderungspreises. 
+        Sie porträtieren die Gewinner:innen des Literaturstipendiums, Rezka Kanzian und Mike Markart, und geben Einblicke in 
+        ihr kreatives Schaffen sowie ihre persönliche Verbindung zur Literatur.
+        </p>
+      </div>
+    </section>
+
+    <section class="polaroid-gallery">
+  <figure class="polaroid" data-index="0">
+    <img src="../assets/img/Kunstportraits/polaroid/frame_1.png" 
+         data-fullsize="../assets/img/Kunstportraits/fullsize/portrait_frame_1.png" 
+         alt="Projekt Bild 1">
+    <figcaption></figcaption>
+  </figure>
+
+  <figure class="polaroid" data-index="1">
+    <img src="../assets/img/Kunstportraits/polaroid/frame_2.png" 
+         data-fullsize="../assets/img/Kunstportraits/fullsize/portrait_frame_2.png" 
+         alt="Portrait">
+    <figcaption></figcaption>
+  </figure>
+
+  <figure class="polaroid" data-index="2">
+    <img src="../assets/img/Kunstportraits/polaroid/frame_4.png" 
+         data-fullsize="../assets/img/Kunstportraits/fullsize/portrait_frame_4.png" 
+         alt="Projekt Bild 3">
+    <figcaption></figcaption>
+  </figure>
+
+  <figure class="polaroid" data-index="3">
+    <img src="../assets/img/Kunstportraits/polaroid/frame_5.png" 
+         data-fullsize="../assets/img/Kunstportraits/fullsize/portrait_frame_5.png" 
+         alt="Projekt Bild 3">
+    <figcaption></figcaption>
+  </figure>
+
+  <figure class="polaroid" data-index="4">
+    <img src="../assets/img/Kunstportraits/polaroid/frame_6.png" 
+         data-fullsize="../assets/img/Kunstportraits/fullsize/portrait_frame_6.png" 
+         alt="Projekt Bild 3">
+    <figcaption></figcaption>
+  </figure>
+
+  <figure class="polaroid" data-index="5">
+    <img src="../assets/img/Kunstportraits/polaroid/frame_7.png" 
+         data-fullsize="../assets/img/Kunstportraits/fullsize/portrait_frame_7.png" 
+         alt="Projekt Bild 3">
+    <figcaption></figcaption>
+  </figure>
+
+</section>
+
+<!-- Overlay -->
+<div class="gallery-overlay">
+  <button class="close" aria-label="Close gallery">×</button>
+  <button class="prev">‹</button>
+  <img class="overlay-image" src="" alt="">
+  <button class="next">›</button>
+</div>
+
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Eva Eklaude</p>
+  </footer>
+
+  <!-- SVG Filter für handgezeichnete Buttons -->
+  <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+    <filter id="handdrawn-border">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+    </filter>
+  </svg>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/projects.js"></script>
+  <script src="../assets/js/project-navigation.js"></script>
+
+</body>
+</html>

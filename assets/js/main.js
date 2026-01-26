@@ -132,7 +132,7 @@ function rand(min, max) {
 // Generiere wellige Underlines für alle h1 Überschriften
 document.addEventListener('DOMContentLoaded', () => {
   // Nicht auf der Startseite oder Projektseiten anzeigen
-  const isHomePage = window.location.pathname.includes('home.html') || 
+  const isHomePage = window.location.pathname.includes('index.html') || 
                      window.location.pathname === '/' || 
                      window.location.pathname === '/index.html';
   

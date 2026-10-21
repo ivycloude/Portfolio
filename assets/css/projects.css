@@ -20,7 +20,7 @@ main {
   border-radius: 12px;
   overflow: hidden;
   margin: 0 auto 2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   z-index: 1001
 }
 
@@ -124,7 +124,7 @@ main {
   display: flex;
   gap: 4rem;
   margin: 0 20%;
-  padding-bottom: 4rem;
+  padding-bottom: 0rem;
 }
 
 .details-left,

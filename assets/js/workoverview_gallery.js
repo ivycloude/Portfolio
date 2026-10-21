@@ -5,6 +5,7 @@
 const projects = [
   { 
     title: "Frauen* im Film", 
+    subtitle: "Dokumentation",
     url: "projects/frauen.html", 
     img: "assets/img/Thumbnails/frauen_thumb.png",
     width: 400,  // Tatsächliche Bild-Breite
@@ -12,7 +13,8 @@ const projects = [
   },
 
    { 
-    title: "Filmriss", 
+    title: "Filmriss",
+    subtitle: "Mixed Media Projekt",
     url: "projects/filmriss.html", 
     img: "assets/img/Thumbnails/filmriss_thumb.png",
     width: 400,  // Tatsächliche Bild-Breite
@@ -20,7 +22,8 @@ const projects = [
   },
 
   { 
-    title: "Künstler:innenportraits", 
+    title: "Künstler:innenportraits",
+    subtitle: "filmische Portraits",
     url: "projects/kunstportraits.html", 
     img: "assets/img/Thumbnails/kunstportraits_thumb.png",
     width: 400,  // Tatsächliche Bild-Breite
@@ -28,34 +31,39 @@ const projects = [
   },
   { 
     title: "Helle Nächte Dunkle Folgen", 
+    subtitle: "Dokumentation",
     url: "projects/helle-naechte.html", 
     img: "assets/img/Thumbnails/doku_thumb.png",
     width: 400,
     height: 300
   },
   { 
-    title: "Social Media Projekte", 
+    title: "Social Media Projekte",
+    subtitle: "diverse Arbeiten",
     url: "projects/social-media.html", 
     img: "assets/img/Thumbnails/reels_thumb.png",
     width: 400,
     height: 300
   },
   { 
-    title: "Gestaltete Sehnsucht", 
+    title: "Gestaltete Sehnsucht",
+    subtitle: "Research Video",
     url: "projects/gestaltete-sehnsucht.html", 
     img: "assets/img/Thumbnails/sehnsucht_thumb.png",
     width: 400,
     height: 300
   },
   { 
-    title: "Changing Beauty", 
+    title: "Changing Beauty",
+    subtitle: "Kunstprojekt",
     url: "projects/changing-beauty.html", 
     img: "assets/img/Thumbnails/beauty_thumb.png",
     width: 400,
     height: 300
   },
   { 
-    title: "Animationen", 
+    title: "Animationen",
+    subtitle: "2D und 3D",
     url: "projects/animation.html", 
     img: "assets/img/Thumbnails/animation_thumb.png",
     width: 400,
@@ -69,11 +77,18 @@ const gallery = document.querySelector('.project-gallery');
 projects.forEach((p, index) => {
   gallery.innerHTML += `
     <a href="${p.url}" class="project-card">
-      <img src="${p.img}" 
-           alt="${p.title}" 
-           loading="${index < 3 ? 'eager' : 'lazy'}"
-           width="${p.width}" 
-           height="${p.height}">
+      <div class="project-card-image">
+        <img src="${p.img}"
+             alt="${p.title}"
+             loading="${index < 3 ? 'eager' : 'lazy'}"
+             width="${p.width}"
+             height="${p.height}">
+
+        <div class="project-card-overlay">
+          <p>${p.subtitle || ""}</p>
+        </div>
+      </div>
+
       <h3>${p.title}</h3>
     </a>`;
 });

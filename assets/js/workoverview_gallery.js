@@ -3,6 +3,14 @@
 // ========================================
 
 const projects = [
+  { 
+    title: "Frauen* im Film", 
+    url: "projects/frauen.html", 
+    img: "assets/img/Thumbnails/frauen_thumb.png",
+    width: 400,  // Tatsächliche Bild-Breite
+    height: 300  // Tatsächliche Bild-Höhe
+  },
+
    { 
     title: "Filmriss", 
     url: "projects/filmriss.html", 
@@ -73,7 +81,7 @@ projects.forEach((p, index) => {
 // Zufällige Drehung für jede Karte
 const cards = document.querySelectorAll('.project-card');
 cards.forEach(card => {
-  const rotation = (Math.random() * 6 - 5).toFixed(2); // -5° bis +5°
+  const rotation = (Math.random() * 14 - 7).toFixed(2); // -7° bis +7°
   card.dataset.rotation = rotation;
   
   // Anfangsrotation

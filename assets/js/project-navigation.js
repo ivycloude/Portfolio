@@ -1,6 +1,7 @@
 // Projekt-Navigation
 // Definiere alle Projekte in der gewünschten Reihenfolge
 const projects = [
+   { id: 'frauen', file: 'frauen.html', title: 'Warum wir mehr Frauen* im Film brauchen' },
   { id: 'filmriss', file: 'filmriss.html', title: 'Filmriss' },
   { id: 'kunstportraits', file: 'kunstportraits.html', title: 'Künstler:innenportraits' },
   { id: 'helle-naechte', file: 'helle-naechte.html', title: 'Helle Nächte Dunkle Folgen' },

@@ -1,4 +1,4 @@
-const words = ["film", "postproduction", "directing", "sound design", "acting", "storytelling", "conceptualization", ]; // Wörter, die getippt werden
+const words = ["film", "postproduction", "directing", "acting", "conceptualization","storytelling"]; // Wörter, die getippt werden
 let i = 0; // Wort-Index
 let j = 0; // Buchstaben-Index
 let currentWord = "";

@@ -3,6 +3,14 @@
 // ========================================
 
 const projects = [
+   { 
+    title: "Filmriss", 
+    url: "projects/filmriss.html", 
+    img: "assets/img/Thumbnails/filmriss_thumb.png",
+    width: 400,  // Tatsächliche Bild-Breite
+    height: 300  // Tatsächliche Bild-Höhe
+  },
+
   { 
     title: "Künstler:innenportraits", 
     url: "projects/kunstportraits.html", 

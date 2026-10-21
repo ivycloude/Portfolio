@@ -1,6 +1,7 @@
 // Projekt-Navigation
 // Definiere alle Projekte in der gewünschten Reihenfolge
 const projects = [
+  { id: 'filmriss', file: 'filmriss.html', title: 'Filmriss' },
   { id: 'kunstportraits', file: 'kunstportraits.html', title: 'Künstler:innenportraits' },
   { id: 'helle-naechte', file: 'helle-naechte.html', title: 'Helle Nächte Dunkle Folgen' },
   { id: 'social-media', file: 'social-media.html', title: 'Social Media' },

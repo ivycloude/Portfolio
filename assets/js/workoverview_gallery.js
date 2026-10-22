@@ -7,7 +7,7 @@ const projects = [
     title: "Frauen* im Film", 
     subtitle: "Dokumentation",
     url: "projects/frauen.html", 
-    img: "assets/img/Thumbnails/frauen_thumb.png",
+    img: "assets/img/Thumbnails/frauen_thumb.jpg",
     width: 400,  // Tatsächliche Bild-Breite
     height: 300  // Tatsächliche Bild-Höhe
   },
@@ -16,7 +16,7 @@ const projects = [
     title: "Filmriss",
     subtitle: "Mixed Media Projekt",
     url: "projects/filmriss.html", 
-    img: "assets/img/Thumbnails/filmriss_thumb.png",
+    img: "assets/img/Thumbnails/filmriss_thumb.jpg",
     width: 400,  // Tatsächliche Bild-Breite
     height: 300  // Tatsächliche Bild-Höhe
   },
@@ -25,7 +25,7 @@ const projects = [
     title: "Künstler:innenportraits",
     subtitle: "filmische Portraits",
     url: "projects/kunstportraits.html", 
-    img: "assets/img/Thumbnails/kunstportraits_thumb.png",
+    img: "assets/img/Thumbnails/kunstportraits_thumb.jpg",
     width: 400,  // Tatsächliche Bild-Breite
     height: 300  // Tatsächliche Bild-Höhe
   },
@@ -33,7 +33,7 @@ const projects = [
     title: "Helle Nächte Dunkle Folgen", 
     subtitle: "Dokumentation",
     url: "projects/helle-naechte.html", 
-    img: "assets/img/Thumbnails/doku_thumb.png",
+    img: "assets/img/Thumbnails/doku_thumb.jpg",
     width: 400,
     height: 300
   },
@@ -41,7 +41,7 @@ const projects = [
     title: "Social Media Projekte",
     subtitle: "diverse Arbeiten",
     url: "projects/social-media.html", 
-    img: "assets/img/Thumbnails/reels_thumb.png",
+    img: "assets/img/Thumbnails/reels_thumb.jpg",
     width: 400,
     height: 300
   },
@@ -49,7 +49,7 @@ const projects = [
     title: "Gestaltete Sehnsucht",
     subtitle: "Research Video",
     url: "projects/gestaltete-sehnsucht.html", 
-    img: "assets/img/Thumbnails/sehnsucht_thumb.png",
+    img: "assets/img/Thumbnails/sehnsucht_thumb.jpg",
     width: 400,
     height: 300
   },
@@ -57,7 +57,7 @@ const projects = [
     title: "Changing Beauty",
     subtitle: "Kunstprojekt",
     url: "projects/changing-beauty.html", 
-    img: "assets/img/Thumbnails/beauty_thumb.png",
+    img: "assets/img/Thumbnails/beauty_thumb.jpg",
     width: 400,
     height: 300
   },
@@ -65,7 +65,7 @@ const projects = [
     title: "Animationen",
     subtitle: "2D und 3D",
     url: "projects/animation.html", 
-    img: "assets/img/Thumbnails/animation_thumb.png",
+    img: "assets/img/Thumbnails/animation_thumb.jpg",
     width: 400,
     height: 300
   },
